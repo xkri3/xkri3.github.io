@@ -1,9 +1,12 @@
 import * as THREE from 'three/webgpu';
-import { lerp } from 'three/src/math/MathUtils';
 
 let cursor = { x: 0, y: 0 };
 let cameraRotation = { x: 0, y: 0 };
 let stars = [];
+
+function lerp(start, end, amount) {
+  return (1 - amount) * start + amount * end;
+}
 
 document.addEventListener('mousemove', (event) => {
   cursor = {
@@ -31,7 +34,6 @@ for (let i = 0; i < 1000; i++)
     Math.random() * 1080 - 540,  // Y: from -540 to +540
     -200
   );  
-  console.log(star.position);
   scene.add(star);
   stars.push(star);
 }
