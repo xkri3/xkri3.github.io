@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build directories
+dist/
+build/
+
+# IDE or text editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Three.js submodule tracking file
+three.js/.git
+
+# Optional: Add other build artifacts, like compiled files or bundled assets
+*.min.js
+*.bundle.js
+
+# Ignore .env file if you're storing sensitive data
+.env
