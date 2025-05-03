@@ -26,7 +26,7 @@ function isDark() {
 function updateSceneTheme() {
   const dark = isDark();
   scene.background = new THREE.Color(dark ? "#140a33" : "#ccbff2");
-  favicon.href = dark ? "favicon-dark.ico" : "favicon-light.ico";
+  favicon.href = dark ? "./static/icons/favicon-light.ico" : "./static/icons/favicon-dark.ico";
 
   // Update all stars' colors
   stars.forEach(star => {
