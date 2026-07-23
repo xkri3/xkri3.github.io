@@ -1,4 +1,5 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from "three";
+import {WebGPURenderer} from "three/webgpu";
 
 // #region VARIABLES
 let cursor = { x: 0, y: 0 };
@@ -8,7 +9,7 @@ let stars = [];
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-const renderer = new THREE.WebGPURenderer();
+const renderer = new WebGPURenderer();
 
 const themeToggleButton = document.getElementById("theme-toggle");
 const favicon = document.getElementById("favicon");
@@ -96,7 +97,7 @@ const render = (time) => {
 
   camera.lookAt(-cameraRotation.x, cameraRotation.y, 0);
 
-  renderer.renderAsync(scene, camera);
+  renderer.render(scene, camera);
   requestAnimationFrame(render);
 };
 requestAnimationFrame(render);
